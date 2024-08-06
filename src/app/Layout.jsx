@@ -12,9 +12,9 @@ export default function Layout() {
   return (
     <>
       <nav className="flex justify-between px-3 lg:px-20 py-3">
-        <div className="flex items-center">
+        <Link className="flex items-center font-bold">
           <div>Logo Here</div>
-        </div>
+        </Link>
       </nav>
       <div className="mx-auto sm:w-5/6 lg:w-8/12 xl:w-6/12">
         <Menubar />

@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { MdOutlineStar, MdOutlineStarBorder, MdFiberNew } from "react-icons/md";
+import { MdOutlineStar, MdOutlineStarBorder } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   return (
@@ -24,7 +25,7 @@ const DocItem = () => {
   const [favorite, setFavorite] = useState(false);
 
   return (
-    <div className="flex flex-col md:flex-row items-center">
+    <div className="flex items-start md:items-center">
       <div className="flex w-[40px] justify-center items-center gap-3">
         <button
           className="hover:bg-gray-100 p-2 rounded-full"
@@ -37,19 +38,23 @@ const DocItem = () => {
           )}
         </button>
       </div>
-      <div className="w-[170px] px-1">
-        <div className="line-clamp-1">นายสุทธานนท์ ทองนุ่น</div>
-      </div>
-      <div className="flex-1 px-1 border">
-        <div className="line-clamp-1">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-          sequi quae officia quam officiis autem in laborum ipsum ipsa
-          perspiciatis dolores, magnam, a quidem dolorum amet porro vitae
-          excepturi quod?
+      <Link className="flex flex-col md:flex-row" to="letters">
+        <div className="w-[170px] px-1">
+          <div className="line-clamp-1">นายสุทธานนท์ ทองนุ่น</div>
         </div>
-      </div>
-      <div className="w-[100px] px-1 border text-end">
-        <div className="line-clamp-1">27 ก.ค. 67</div>
+        <div className="flex flex-col md:flex-row gap-1 flex-1 px-1">
+          <div className="font-bold flex-shrink-0">head line</div>
+          <div className="hidden md:inline-block">-</div>
+          <div className="line-clamp-1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+            sequi quae officia quam officiis autem in laborum ipsum ipsa
+            perspiciatis dolores, magnam, a quidem dolorum amet porro vitae
+            excepturi quod?
+          </div>
+        </div>
+      </Link>
+      <div className="w-[200px] px-1 text-end">
+        <div className="font-bold">27 ก.ค.</div>
       </div>
     </div>
   );
