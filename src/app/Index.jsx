@@ -25,7 +25,7 @@ const DocItem = () => {
   const [favorite, setFavorite] = useState(false);
 
   return (
-    <div className="flex items-start md:items-center">
+    <div className="flex items-start md:items-center border-b">
       <div className="flex w-[40px] justify-center items-center gap-3">
         <button
           className="hover:bg-gray-100 p-2 rounded-full"
@@ -66,6 +66,7 @@ export default function Index() {
       <Dashboard />
       <div className="p-3">
         <div className="flex flex-col">
+          <DocItem />
           <DocItem />
         </div>
       </div>
