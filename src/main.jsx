@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./app/Layout";
 import Index from "./app/Index";
 import Letters from "./app/Letters";
+import CreateDoc from "./app/CreateDoc";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "letters",
         element: <Letters />,
+      },
+      {
+        path: "create-doc",
+        element: <CreateDoc />,
       },
     ],
   },
